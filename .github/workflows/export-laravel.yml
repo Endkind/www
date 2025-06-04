@@ -51,6 +51,9 @@ jobs:
       - name: Export Static Version
         run: php artisan export
 
+      - name: Add CNAME file
+        run: echo "www.endkind.net" > dist/CNAME
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
